@@ -17,7 +17,7 @@ This project emphasizes custom data handling, concurrency control, and efficient
 
 ## System Design
 
-The code is split into several logical components:
+The code is split into 5 object-oriented components:
 
 - `stock_order.py`: Defines the StockOrder object, which encapsulates the order type, ticker, quantity, price, and timestamp.
 
@@ -36,3 +36,4 @@ A shared lock protects modifications to the ticker map when inserting new ticker
 ## Matching Algorithm
 
 Buy orders are sorted in descending order of price, while sell orders are sorted in ascending order. The matching engine walks through both lists and matches the best available prices using a greedy two-pointer approach. Once a match is made, the quantities are adjusted or removed depending on the result.
+
